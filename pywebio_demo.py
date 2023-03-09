@@ -196,6 +196,6 @@ def index():
 
 
 if __name__ == '__main__':
-    start_server(applications=index, host='192.168.150.109',port=61157)
-    # start_server(applications=index)
+    # start_server(applications=index, host='192.168.150.109',port=61157)
+    start_server(applications=index)
     # put_image('https://views.whatilearened.today/views/github/evil0ctal/TikTokDownload_PyWebIO.svg', title='访问记录')
