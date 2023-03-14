@@ -3,7 +3,7 @@
 # @Author  : ZhuGaochao
 # @File    : pywebio_demo.py
 # @Software: PyCharm
-from pywebio.output import put_text, put_scope, put_markdown, put_buttons
+from pywebio.output import put_text, put_scope, put_markdown, put_buttons, use_scope
 from pywebio.pin import put_checkbox, put_input
 from pywebio import start_server
 from pywebio import input
@@ -18,6 +18,7 @@ def index():
     place_hoder = 'sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     put_input(name='pin_name', label='请输入 OpenAI API Key：', placeholder=place_hoder)
 
+    @use_scope('scope', clear=True)
     def check_key_balance():
         # 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
         sk = pin.pin.pin_name.replace(" ", "")
